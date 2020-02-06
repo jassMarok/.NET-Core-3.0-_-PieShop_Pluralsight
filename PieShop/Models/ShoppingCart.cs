@@ -27,7 +27,9 @@ namespace PieShop.Models
          */
         public List<ShoppingCartItem> ShoppingCartItems { get; set; }
 
-
+        /**
+         * Return a new shopping cart with shopping cart id
+         */
         public static ShoppingCart GetCart(IServiceProvider services)
         {
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
